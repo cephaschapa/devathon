@@ -1,0 +1,32 @@
+.root {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background: rgb(0, 0, 0, .5);
+    @apply flex items-center justify-center duration-200 transform transition ease-linear;
+}
+
+.messageBox{
+    height: 600px;
+    width: 1000px;
+    border-radius: 5px;
+    overflow-x: scroll;
+    @apply bg-white px-10 py-5;
+}
+
+.header{
+    @apply border-b py-5 flex flex-col justify-center font-bold space-y-2;
+}
+
+.body{
+    @apply py-10;
+}
+
+.newFeatures{
+    @apply space-y-2
+}
+
+.bugFixes{
+    @apply py-10;
+}
