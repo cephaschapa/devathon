@@ -25,11 +25,11 @@ export default function Home() {
             <div className={styles.body}>
                 <div className={styles.inputWrapper}>
                   <SlEnvolope className={styles.inputIcon}/>
-                  <input className={styles.input} placeholder="Username"/>
+                  <input className={styles.input} placeholder="Username" value="user1"/>
                 </div>
                 <div className={styles.inputWrapper}>
-                  <SlKey className={styles.inputIcon}/>
-                  <input className={styles.input} placeholder="Password"/>
+                  <SlKey className={styles.inputIcon} />
+                  <input className={styles.input} placeholder="Password" value="password1"/>
                 </div>
             </div>
             <div className={styles.footer}>
