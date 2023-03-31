@@ -1,6 +1,7 @@
 import React, { FC, HTMLAttributes, useState } from "react";
 import styles from "./Modal.module.css";
 import { SlLink } from "react-icons/sl";
+import Link from "next/link";
 
 interface Props {
     title: string,
@@ -21,7 +22,9 @@ const Modal:FC<Props> = ({title, date, data}) => {
                     <p className="text-blue-600">March 31, 2023</p>
                     <p className="text-xl">Devathon exposes developers, collaboraters to a wider scope of hackathons. </p>
                     <p className="text-gray-600">Web Release</p>
-                    <button className="w-40 rounded-3xl flex items-center justify-between space-x-2  p-3 text-white bg-blue-600 font-normal "><span>Change log</span> <SlLink/></button>
+                    <Link href="https://github.com/cephaschapa/devathon/blob/main/CHANGELOG.md">
+                        <button className="w-40 rounded-3xl flex items-center justify-between space-x-2  p-3 text-white bg-blue-600 font-normal "><span>Change log</span> <SlLink/></button>
+                    </Link>
                 </div>
                 <div className={styles.body}>
                     <div className={styles.newFeatures}>
