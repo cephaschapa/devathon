@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from "./index.module.css";
-import MovingText from 'react-moving-text';
+// import MovingText from 'react-moving-text';
 import Modal from "@/components/Modal/Modal";
 
 
@@ -17,16 +17,9 @@ const Home = () => {
         <>
             <Modal title="Test" date="2023-03-31" data={data}/>
             <main className={styles.main}>
-            <MovingText
-                type="zoomIn"
-                duration="1500ms"
-                delay="0s"
-                direction="normal"
-                timing="ease"
-                iteration="1"
-                fillMode="none">
-                    Welcome to &nbsp;<span className='text-blue-600 text-opacity '>{"<DevaThon/>"}</span>
-            </MovingText>
+            <div>
+                Welcome to &nbsp;<span className='text-blue-600 text-opacity '>{"<DevaThon/>"}</span>
+            </div>
             
             </main>
         </>
