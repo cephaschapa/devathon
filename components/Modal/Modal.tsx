@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, HTMLAttributes, useState } from "react";
 import styles from "./Modal.module.css";
 import { SlLink } from "react-icons/sl";
 
@@ -9,10 +9,11 @@ interface Props {
 }
 
 const Modal:FC<Props> = ({title, date, data}) => {
-    const [hasLoaded, setHasLoaded] = useState<boolean>(false);
-    setInterval(()=>{
-        setHasLoaded(true)
-    }, 1500)
+    const [hasLoaded, setHasLoaded] = useState<boolean>(true);
+   
+    const readNotes = (e: HTMLAttributes<HTMLButtonElement>) => {
+        setHasLoaded(false)
+    }
     return (
         <div className={`${styles.root} ${hasLoaded ? "scale-100":"scale-0"}`}>
             <div className={styles.messageBox}>
@@ -43,7 +44,7 @@ const Modal:FC<Props> = ({title, date, data}) => {
                     <p className="text-blue-600 underline ">https://www.devathon.io/HTB20231a</p>
                 </div>
                 <div className="py-4">
-                    <button className="w-40 rounded-3xl flex items-center justify-center space-x-2  p-3 text-white bg-blue-600 font-normal ">
+                    <button onClick={(e:any)=>readNotes(e)} className="w-40 rounded-3xl flex items-center justify-center space-x-2  p-3 text-white bg-blue-600 font-normal ">
                         Done
                     </button>
                 </div>
